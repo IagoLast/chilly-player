@@ -1,0 +1,35 @@
+:host {
+  width: 204px;
+  transition: transform .3s;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+:host:hover {
+  transform: scale(1.05, 1.05);
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 174px;
+  height: 174px;
+  cursor: pointer;
+}
+
+p {
+  text-align: center;
+  margin: 0;
+  font-weight: 100;
+  color: white;
+}
+
+p.name {
+  font-size: 1em;
+  margin: 5px auto;
+}
+
+p.artist {
+  font-size: .8em;
+  margin-bottom: 5px;
+}

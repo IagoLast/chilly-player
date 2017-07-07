@@ -1,0 +1,17 @@
+{
+  "name": "Chilly Player",
+  "short_name": "ChillyP",
+  "lang": "en",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#f9f9f9",
+  "background_color": "#fff",
+  "start_url": "index.html",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "type": "image/png",
+      "sizes": "72x72 96x96 128x128 256x256 512x512"
+    }
+  ]
+}

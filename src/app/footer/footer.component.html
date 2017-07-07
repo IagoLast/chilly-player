@@ -1,0 +1,9 @@
+<div (click)="onClick($event)" class="progress-wrapper">
+  <div class="progress" [style.width]="time"></div>
+</div>
+<button *ngIf="!displayPause()" type="button" (click)="play()">
+  <img src="/assets/play.svg" alt="Play">
+</button>
+<button *ngIf="displayPause()" type="button" (click)="pause()">
+  <img src="/assets/pause.svg" alt="Pause">
+</button>

@@ -1,0 +1,4 @@
+<div *ngIf="showSpinner"></div>
+<div *ngIf="!showSpinner" class="tracks">
+  <app-track *ngFor="let track of tracks" [track]="track" [callback]="playTrack"></app-track>
+</div>

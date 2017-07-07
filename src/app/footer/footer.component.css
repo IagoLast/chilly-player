@@ -1,0 +1,45 @@
+:host {
+  background: white;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+  display: flex;
+  align-items: center;
+  padding: 0 30px
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+p {
+  flex: 1;
+}
+
+.progress-wrapper {
+  position: relative;
+  display: block;
+  flex: 1;
+  background-color: #ccc;
+  height: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.progress {
+  background-color: red;
+  height: 5px;
+  width: 0%;
+  transition: width .2s;
+  will-change: width;
+}

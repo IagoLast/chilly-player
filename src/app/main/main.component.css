@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  left: 0;
+  right: 0;
+  height: calc(100% - 60px);
+  padding: 60px 0;
+  overflow-y: scroll;
+  background-color: #2a2240;
+  background: url('/assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tracks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

@@ -1,14 +1,54 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>ChillyPlayer</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="prefetch" href="assets/bg.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <script defer src="https://www.youtube.com/iframe_api"></script>
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Chilly">
+  <meta name="apple-mobile-web-app-title" content="Chilly">
+  <meta name="theme-color" content="#f9f9f9">
+  <meta name="msapplication-navbutton-color" content="#f9f9f9">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="https://chilly-player.firebaseapp.com">
+  <link rel="icon" type="image/svg" href="https://chilly-player.firebaseapp.com/assets/logo.svg">
+  <link rel="apple-touch-icon" type="image/svg" href="https://chilly-player.firebaseapp.com/assets/logo.svg">
+  <noscript>
+    <p>Sorry, this site requires javascript</p>
+  </noscript>
+  <script>
+    if ('serviceWorker' in navigator) {
+      // navigator.serviceWorker.register('/sw.js');
+    }
+    var options = {
+      rootMargin: '100px',
+      threshold: 0,
+    }
+
+    window.observer = new IntersectionObserver(observerCallback, options);
+
+    function observerCallback(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          let src = entry.target.getAttribute('data-o-src');
+          entry.target.setAttribute('src', src);
+          window.observer.unobserve(entry.target);
+        }
+      });
+    }
+  </script>
 </head>
+
 <body>
-  <app-root>Loading...</app-root>
+  <app-root></app-root>
 </body>
+
 </html>
